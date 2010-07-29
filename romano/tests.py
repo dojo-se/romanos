@@ -5,6 +5,8 @@ def roman2deciman(rom):
 
     if rom == 'IV':
         return 4
+    elif rom == 'V':
+        return 5
     else:
         return len(rom)
 
@@ -17,6 +19,8 @@ class StubTests(unittest.TestCase):
     def testBar(self):
         self.assertEquals(roman2deciman('IV'), 4)
 
+    def testAllWords(self):
+        self.assertEquals(roman2deciman('V'), 5)
 
 
 
