@@ -5,19 +5,26 @@ def roman2deciman(rom):
 
     map = {'I':1,'V':5,'X':10, 'L':50, 'C':100,
         'M':1000}
+    valorTotal = 0
+    valorAuxiliar = 0
+    valorAuxiliarDois = 0
+    for letra in rom:
+        if map.get(letra):
+            valorTotal += map[letra]
+
 
     if map.get(rom):
-        _retorno = map[rom]
+        return map[rom]
     elif rom == 'IV':
-        _retorno = 4
+        return 4
     elif rom == 'V':
-        _retorno = 5
+        return 5
     elif rom == 'VI':
-        _retorno = 6
+        return 6
     else:
-        _retorno = len(rom)
+        return len(rom)
 
-    return _retorno
+    return valorTotal
 
 class StubTests(unittest.TestCase):
     def testFoo(self):
@@ -36,7 +43,6 @@ class StubTests(unittest.TestCase):
 
     def testMapeamento(self):
         self.assertEquals(roman2deciman('X'), 10)
-
 
 
 
