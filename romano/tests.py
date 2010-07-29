@@ -1,6 +1,5 @@
 import unittest
 
-
 def roman2deciman(rom):
 
     map = {'I':1,'V':5,'X':10, 'L':50, 'C':100,
@@ -11,7 +10,6 @@ def roman2deciman(rom):
     for letra in rom:
         if map.get(letra):
             valorTotal += map[letra]
-
 
     if map.get(rom):
         return map[rom]
@@ -27,9 +25,13 @@ def roman2deciman(rom):
     return valorTotal
 
 class StubTests(unittest.TestCase):
-    def testFoo(self):
+    def testI(self):
         self.assertEquals(roman2deciman('I'), 1)
+
+    def testII(self):
         self.assertEquals(roman2deciman('II'), 2)
+
+    def testIII(self):
         self.assertEquals(roman2deciman('III'), 3)
 
     def testBar(self):
