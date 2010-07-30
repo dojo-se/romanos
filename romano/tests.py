@@ -14,7 +14,8 @@ def roman2deciman(rom):
         return map[rom]
     elif rom == 'IV':
         return 4
-
+    elif rom == 'IX':
+        return 9
     return valorTotal
 
 class StubTests(unittest.TestCase):
@@ -36,8 +37,8 @@ class StubTests(unittest.TestCase):
     def testVI(self):
         self.assertEquals(roman2deciman('VI'), 6)
 
-    def testVI(self):
-        self.assertEquals(roman2deciman('VI'), 6)
+    def testIX(self):
+        self.assertEquals(roman2deciman('IX'), 9)
 
     def testX(self):
         self.assertEquals(roman2deciman('X'), 10)
