@@ -4,11 +4,12 @@ def roman2deciman(rom):
 
     map = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'M':1000}
     valorTotal = 0
-    valorAuxiliar = 0
-    valorAuxiliarDois = 0
+    valorAtual = 0
+    valorProximo = 0
 
     for letra in rom:
         valorTotal += map[letra]
+        if
 
     if map.get(rom):
         return map[rom]
